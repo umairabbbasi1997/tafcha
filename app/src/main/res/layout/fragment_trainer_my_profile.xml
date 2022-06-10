@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.TrainerMyProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_user"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_10sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:src="@drawable/user_dp"
+                    app:civ_border_color="@color/sky_blue"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/textStyleHeadingPink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="John Smith"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile_image"
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="john.smith@domain.com"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+
+                    >
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/tv_bio"
+                    style="@style/textStyleHeadingPink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/experience"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_email"
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_bio_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:maxLines="3"
+                    android:text="lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna
+aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi
+ut aliquip ex ea commodo consequat.
+Sed ut perspiciatis unde omnis iste natus
+error sit voluptatem accusantiue unde
+doloremque laudantium lorem ipsum
+dolor sit amet, consectetur adipisicing
+elit, sed do eiusmod tempor voluptatem
+incididunt ut labore."
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_bio"
+
+                    >
+
+                </TextView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_client"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/client"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintLeft_toLeftOf="@id/card_user"
+            app:layout_constraintTop_toBottomOf="@id/card_user"
+
+            >
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/tv_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintRight_toRightOf="@id/card_user"
+            app:layout_constraintTop_toBottomOf="@id/card_user"
+
+            >
+
+        </TextView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_clients"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_client"
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_client"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_intro_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/intro_video"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintLeft_toLeftOf="@id/card_clients"
+            app:layout_constraintTop_toBottomOf="@id/card_clients"
+
+            >
+
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_intro_vid"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_intro_video"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/intro_vid_bg"
+
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/intro_btn_play"
+                >
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

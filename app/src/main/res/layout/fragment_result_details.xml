@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ResultDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_user"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp"
+
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Smith Challenged you"
+                style="@style/textStyleHeadingPink"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/tv_exercise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercise"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:textSize="@dimen/_12ssp"
+                android:drawableLeft="@drawable/pink_dot_icon"
+                android:drawablePadding="@dimen/_10sdp"
+                style="@style/textStyleHeadingPink"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+                >
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@id/tv_exercise_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textSize="16sp"
+                android:text="lorem ipsum dolor sit amet, consectetur
+adipisicing elit, sed do eiusmod tempor
+incididunt ut labore et dolore magna
+aliqua. Ut enim ad minim veniam, quis
+nostrud exercitation ullamco laboris nisi
+ut aliquip ex ea commodo consequat. "
+                android:textColor="#666666"
+                app:layout_constraintTop_toBottomOf="@id/tv_exercise"
+                />
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btn_play_others_vid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rounded_mild_white_bg"
+                android:padding="@dimen/_50ssp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/tv_exercise_details"
+                >
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/sky_blue"
+                    android:background="@drawable/btn_play_video"
+                    >
+
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/tv_others_vid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Play John Smith's video"
+                    style="@style/textStyleHeadingPink"
+                    android:textColor="@color/sky_blue"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    >
+
+                </TextView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btn_play_your_vid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/rounded_mild_white_bg"
+                android:padding="@dimen/_50ssp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/btn_play_others_vid"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/sky_blue"
+                    android:background="@drawable/btn_play_video"
+                    >
+
+                </ImageButton>
+
+                <TextView
+                    android:id="@+id/tv_your_vid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Play your video"
+                    style="@style/textStyleHeadingPink"
+                    android:textColor="@color/sky_blue"
+                    app:layout_constraintLeft_toRightOf="@id/profile_image"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    >
+
+                </TextView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

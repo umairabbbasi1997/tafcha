@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.fictivestudios.tafcha"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //kotlin language
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+    //dimens
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+    //otp view
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.2'
+
+    //circular progressbar
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+
+    //seekbar
+    implementation 'com.github.warkiz.widget:indicatorseekbar:2.1.2'
+
+    //slideview
+    implementation 'com.chabbal:slidingdotsplash:1.0.2'
+
+
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //expandable layout
+    implementation 'com.ms-square:expandableTextView:0.1.4'
+
+    //rounded horizontal progressbar
+    implementation 'com.sasank.roundedhorizontalprogress:roundedhorizontalprogress:1.0.1'
+
+    //image picker
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+}
+/*
+repositories {
+    mavenCentral()
+}*/
